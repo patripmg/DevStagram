@@ -11,7 +11,7 @@ class PostController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except(['show', 'index']); //el usuario tiene que estar autenticado para poder acceder a los metodos de abajo excepto los que ponemos
     }
     public function index(User $user){
 
