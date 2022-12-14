@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Intervention\Image\Facades\Image;
 
 class PerfilController extends Controller
@@ -25,11 +26,11 @@ class PerfilController extends Controller
 
         $this->validate($request, [
             'username' => ['required','unique:users,username,'.auth()->user()->id,'min:3','max:20', 'not_in:twitter,editar-perfil'],
+            'email' => ['required','email', 'unique:users,email,'.auth()->user()->id],
         ]);
 
         if($request->imagen) {
 
-                
                 $imagen = $request->file('imagen');
 
                 $nombreImagen = Str::uuid() . "." . $imagen->extension(); //generar id unico para cada imagen porque todos tienen que tener un id unico si o si
@@ -43,11 +44,31 @@ class PerfilController extends Controller
                 $imagenServidor->save($imagenPath); //guardar imagen
         } 
 
+
+       
+
         //Guardar cambios
 
         $usuario = User::find(auth()->user()->id);
         $usuario->username = $request->username;
-        $usuario->imagen = $nombreImagen ?? '';
+        $usuario->email = $request->email;
+        $usuario->imagen = $nombreImagen ?? auth()->user()->imagen ?? null;
+
+
+/*         if($request->password || $request->new_password){
+
+            $this->validate($request, [
+                'password' => 'required|min:6',
+                'new_password' => 'required|confirmed|min:6'
+            ]);
+
+            if(Hash::check($request->password, $usuario->password)){
+                $usuario->password = Hash::make($request->new_password);
+            } else {
+                return back()->with('mensaje', 'La contraseña actual no coincide.');
+            }
+        } */
+
         $usuario->save();
 
         //Redireccionar

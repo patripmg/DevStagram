@@ -45,7 +45,7 @@ Inicia sesión en devStagram
                 name="password" 
                 id="password" 
                 placeholder="Tu contraseña" 
-                class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror"
+                class="border p-3 w-full rounded-lg @error('password') border-red-500 @enderror"
                 />
                 @error('password')
                 <p class="bg-red-500 text-white rounded-lg my-2 text-sm p-2 text-center">{{$message}}</p>

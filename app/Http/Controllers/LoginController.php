@@ -21,6 +21,8 @@ class LoginController extends Controller
             return back()->with('mensaje', 'Usuario o contraseña incorrectos');
         } // si no es true imprime mensaje de error
 
+        //Reescribe el password
+
        
         return redirect()->route('posts.index', auth()->user()->username);
     }

@@ -28,6 +28,24 @@ Editar perfil : <span class="uppercase">{{auth()->user()->username}}</span>
             </div>
 
             <div class="mb-5">
+                <label for="email" class="mb-2 block uppercase text-gray-500 font-bold">
+                    Correo electrónico
+                </label>
+
+                <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    placeholder="Tu nombre de usuario"
+                    class="border p-3 w-full rounded-lg @error('email') border-red-500 @enderror"
+                    value="{{auth()->user()->email}}" 
+                    />
+                @error('email')
+                <p class="bg-red-500 text-white rounded-lg my-2 text-sm p-2 text-center">{{$message}}</p>
+                @enderror
+            </div>
+
+            <div class="mb-5">
                 <label for="imagen" class="mb-2 block uppercase text-gray-500 font-bold">
                     Imagen perfil
                 </label>
@@ -41,6 +59,44 @@ Editar perfil : <span class="uppercase">{{auth()->user()->username}}</span>
                      accept=".jpg, .jpeg, .png"
                     />
             </div>
+
+{{--             <div class="mb-5">
+                <label for="password" class="mb-2 block uppercase text-gray-500 font-bold">
+                   Tu contraseña actual
+                </label>
+                <input 
+                type="password" 
+                name="password" 
+                id="password" 
+                placeholder="Tu contraseña" 
+                class="border p-3 w-full rounded-lg @error('password') border-red-500 @enderror"
+                />
+                @error('password')
+                <p class="bg-red-500 text-white rounded-lg my-2 text-sm p-2 text-center">{{$message}}</p>
+               @enderror
+            </div>
+
+            <div class="mb-5">
+                <label for="new_password" class="mb-2 block uppercase text-gray-500 font-bold">
+                   Nueva contraseña
+                </label>
+                <input 
+                type="password" 
+                name="new_password" 
+                id="new_password" 
+                placeholder="Nueva contraseña" 
+                class="border p-3 w-full rounded-lg @error('new_password') border-red-500 @enderror"
+                />
+                @error('new_password')
+                <p class="bg-red-500 text-white rounded-lg my-2 text-sm p-2 text-center">{{$message}}</p>
+               @enderror
+            </div>
+
+            @if (session('mensaje'))
+                <p>{{session('mensaje')}}</p>
+            @endif --}}
+
+
 
             <input 
                 type="submit" 
