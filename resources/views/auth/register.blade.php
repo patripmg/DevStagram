@@ -14,21 +14,25 @@ Regístrate en devStagram
         <form method="POST" action="{{route('register')}}" novalidate>
             @csrf
             <div class="mb-5">
-                <label for="name" class="mb-2 block uppercase text-gray-500 font-bold">
+                <label 
+                    for="name" 
+                    class="mb-2 block uppercase text-gray-500 font-bold">
                     Nombre
                 </label>
 
                 <input 
-                type="text" 
-                name="name" 
-                id="name" 
-                placeholder="Tu nombre" 
-                class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror"
-                value="{{old('name')}}"
+                    type="text" 
+                    name="name" 
+                    id="name" 
+                    placeholder="Tu nombre"
+                    class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror"
+                    value="{{old('name')}}" 
                 />
+
                 @error('name')
-                 <p class="bg-red-500 text-white rounded-lg my-2 text-sm p-2 text-center">{{$message}}</p>
+                <p class="bg-red-500 text-white rounded-lg my-2 text-sm p-2 text-center">{{$message}}</p>
                 @enderror
+
             </div>
 
             <div class="mb-5">
@@ -37,67 +41,76 @@ Regístrate en devStagram
                 </label>
 
                 <input 
-                type="text" 
-                name="username" 
-                id="username" 
-                placeholder="Tu nombre de usuario" 
-                class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror"
-                value="{{old('username')}}"
+                    type="text" 
+                    name="username" 
+                    id="username" 
+                    placeholder="Tu nombre de usuario"
+                    class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror"
+                    value="{{old('username')}}" 
                 />
+
                 @error('username')
-                <p class="bg-red-500 text-white rounded-lg my-2 text-sm p-2 text-center" >{{$message}}</p>
-               @enderror
+                <p class="bg-red-500 text-white rounded-lg my-2 text-sm p-2 text-center">{{$message}}</p>
+                @enderror
+
             </div>
 
             <div class="mb-5">
                 <label for="email" class="mb-2 block uppercase text-gray-500 font-bold">
-                   Correo electrónico
+                    Correo electrónico
                 </label>
 
                 <input 
-                type="email" 
-                name="email" 
-                id="email" 
-                placeholder="Tu correo electrónico" 
-                class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror"
-                value="{{old('email')}}"
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    placeholder="Tu correo electrónico"
+                    class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror"
+                    value="{{old('email')}}" 
                 />
+
                 @error('email')
                 <p class="bg-red-500 text-white rounded-lg my-2 text-sm p-2 text-center">{{$message}}</p>
-               @enderror
+                @enderror
+
             </div>
 
             <div class="mb-5">
                 <label for="password" class="mb-2 block uppercase text-gray-500 font-bold">
-                   Contraseña
+                    Contraseña
                 </label>
                 <input 
-                type="password" 
-                name="password" 
-                id="password" 
-                placeholder="Tu contraseña" 
-                class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror"
+                    type="password" 
+                    name="password" 
+                    id="password" 
+                    placeholder="Tu contraseña"
+                    class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror" 
                 />
+
                 @error('password')
                 <p class="bg-red-500 text-white rounded-lg my-2 text-sm p-2 text-center">{{$message}}</p>
-               @enderror
+                @enderror
+
+
             </div>
 
             <div class="mb-5">
                 <label for="password_confirmation" class="mb-2 block uppercase text-gray-500 font-bold">
-                   Repetir contraseña
+                    Repetir contraseña
                 </label>
-
                 <input 
-                type="password" 
-                name="password_confirmation" 
-                id="password_confirmation" 
-                placeholder="Repite tu contraseña" 
-                class="border p-3 w-full rounded-lg"
-                />
+                    type="password" 
+                    name="password_confirmation" 
+                    id="password_confirmation"
+                    placeholder="Repite tu contraseña" 
+                    class="border p-3 w-full rounded-lg" />
             </div>
 
-            <input type="submit" value="Crear cuenta" class="bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer uppercase font-bold p-3 rounded-lg text-white w-full">
+            <input 
+                type="submit" 
+                value="Crear cuenta"
+                class="bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer uppercase font-bold p-3 rounded-lg text-white w-full"
+            />
         </form>
     </div>
 </div>
