@@ -12,6 +12,12 @@
 
             @auth
 
+                @php
+                    $mensaje = "hola mundo que tal"
+                @endphp
+                <livewire:like-post :post="$post"/>
+
+
             @if ($post->checkLike(auth()->user()))
 
             <form action="{{route('posts.likes.destroy', $post)}}" method="POST">
