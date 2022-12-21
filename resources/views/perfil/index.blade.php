@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('titulo')
-Editar perfil : <span class="uppercase">{{auth()->user()->username}}</span>
+<h1 class="font-ubuntu font-bold text-3xl text-center  mb-10  text-pink-600">Editar perfil : <span class="uppercase">{{auth()->user()->username}}</span></h1>
+
+
 @endsection
 
 @section('contenido')
@@ -101,7 +103,7 @@ Editar perfil : <span class="uppercase">{{auth()->user()->username}}</span>
             <input 
                 type="submit" 
                 value="Guardar cambios"
-                class="bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer uppercase font-bold p-3 rounded-lg text-white w-full"
+                class="bg-pink-600 hover:bg-pink-700 transition-colors cursor-pointer uppercase font-bold p-3 rounded-lg text-white w-full"
             />
         </form>
     </div>

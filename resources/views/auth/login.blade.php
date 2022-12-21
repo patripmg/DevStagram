@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('titulo')
-Inicia sesión en devStagram
+<h1 class="font-ubuntu font-bold text-3xl text-center  mb-10  text-pink-600">Inicia sesión en devStagram</h1>
+
 @endsection
 
 @section('contenido')
@@ -52,10 +53,10 @@ Inicia sesión en devStagram
                @enderror
             </div>
             <div class="mb-5">
-                <input type="checkbox" name="remember" id=""> <label for="" class=" text-gray-500 text-sm">Recordar usuario</label> 
+                <input type="checkbox" name="remember" id="" class="bg-pink-700"> <label for="" class=" text-gray-500 text-sm">Recordar usuario</label> 
             </div>
 
-            <input type="submit" value="Iniciar sesión" class="bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer uppercase font-bold p-3 rounded-lg text-white w-full">
+            <input type="submit" value="Iniciar sesión" class="bg-pink-600 hover:bg-pink-700 transition-colors cursor-pointer uppercase font-bold p-3 rounded-lg text-white w-full">
         </form>
     </div>
 </div>

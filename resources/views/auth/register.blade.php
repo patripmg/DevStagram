@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('titulo')
-Regístrate en devStagram
+<h1 class="font-ubuntu font-bold text-3xl text-center  mb-10  text-pink-600">Regístrate en devStagram</h1>
 @endsection
 
 @section('contenido')
@@ -109,7 +109,7 @@ Regístrate en devStagram
             <input 
                 type="submit" 
                 value="Crear cuenta"
-                class="bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer uppercase font-bold p-3 rounded-lg text-white w-full"
+                class="bg-pink-600 hover:bg-pink-700 transition-colors cursor-pointer uppercase font-bold p-3 rounded-lg text-white w-full"
             />
         </form>
     </div>

@@ -6,7 +6,7 @@
 
         <div>
             <a href="{{route('posts.show', ['post' => $post, 'user' => $post->user])}}">
-                <img src="{{ asset('uploads') . "/" . $post->imagen}}" alt="Imágen de la publicación {{$post->titulo}}">
+                <img class="rounded-3xl" src="{{ asset('uploads') . "/" . $post->imagen}}" alt="Imágen de la publicación {{$post->titulo}}">
             </a>
 
         </div>

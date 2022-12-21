@@ -2,7 +2,8 @@
 
 
 @section('titulo')
-    Crea una nueva publicación
+   
+    <p class="font-ubuntu  text-pink-600"> Crea una nueva publicación</p>
 @endsection
 @push('styles') 
     <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
@@ -60,7 +61,7 @@
                    @enderror
                 </div>
 
-                <input type="submit" value="Crear publicación" class="bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer uppercase font-bold p-3 rounded-lg text-white w-full">
+                <input type="submit" value="Crear publicación" class="bg-pink-600 hover:bg-pink-700 transition-colors cursor-pointer uppercase font-bold p-3 rounded-lg text-white w-full">
 
             </form>
         </div>

@@ -6,7 +6,15 @@ module.exports = {
     "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php"
   ],
   theme: {
-    extend: {},
+
+
+    extend: {    fontFamily: {
+/*       sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'], */
+      'ubuntu': ['Ubuntu', 'sans-serif'],
+    }},
   },
   plugins: [],
+
+
 }

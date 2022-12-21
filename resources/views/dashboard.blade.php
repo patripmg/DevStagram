@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('titulo')
-Perfil: {{$user->username}}
+
+<p class="font-ubuntu uppercase text-pink-600">Perfil: {{$user->username}}</p>
+
 @endsection
 
 @section('contenido')
@@ -16,7 +18,7 @@ Perfil: {{$user->username}}
             class="md:w-8/12 lg:w-6/12 px-5 flex flex-col items-center md:items-start py-10 md:py-10 md:justify-center">
 
             <div class="flex items-center gap-2">
-                <p class="text-gray-700 uppercase text-2xl">{{$user->username}}</p>
+                <p class="text-pink-700 uppercase text-2xl">{{$user->username}}</p>
                 @auth
                 @if ($user->id === auth()->user()->id)
 
@@ -57,7 +59,7 @@ Perfil: {{$user->username}}
                         <form action="{{ route('users.follow', $user) }}" method="POST">
                             @csrf
                             <input type="submit" value="Seguir"
-                                class="bg-blue-600 text-white rounded-lg uppercase px-3 py-1 text-xs font-bold cursor-pointer">
+                                class="bg-pink-700 text-white rounded-lg uppercase px-3 py-1 text-xs font-bold cursor-pointer">
                         </form>
                         
                         @else
@@ -67,7 +69,7 @@ Perfil: {{$user->username}}
                             @csrf
 
                             <input type="submit" value="Dejar de seguir"
-                                class="bg-red-600 text-white rounded-lg uppercase px-3 py-1 text-xs font-bold cursor-pointer">
+                                class="bg-pink-700 hover:bg-pink-800 text-white rounded-lg uppercase px-3 py-1 text-xs font-bold cursor-pointer">
                         </form>
                     @endif
                 @endif
@@ -79,7 +81,7 @@ Perfil: {{$user->username}}
 
 
 <section class="container mx-auto mt-10">
-    <h2 class="text-4xl text-center font-black my-10">Publicaciones</h2>
+    <h2 class="text-4xl text-center text-pink-600 font-ubuntu my-10">Publicaciones</h2>
     <x-listar-post :posts="$posts" />
 </section>
 @endsection
