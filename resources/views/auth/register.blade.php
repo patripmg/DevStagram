@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('tituloPagina')
+Regístrate en devStagram
+@endsection
+
+
 @section('titulo')
 <h1 class="font-ubuntu font-bold text-3xl text-center  mb-10  text-pink-600">Regístrate en devStagram</h1>
 @endsection

@@ -1,14 +1,18 @@
 @extends('layouts.app')
 
+@section('tituloPagina')
+{{$post->titulo}}
+@endsection
+
 @section('titulo')
- <p class="font-ubuntu uppercase text-pink-600">{{$post->titulo}}</p>
+ <p class="font-ubuntu uppercase text-pink-600"></p>
 
 @endsection
 
 @section('contenido')
 <div class="container mx-auto md:flex">
     <div class="md:w-1/2">
-        <img src="{{asset('uploads') . "/" . $post->imagen}}" alt="Imágen de la publicacion {{$post->titulo}}">
+        <img src="{{asset('uploads') . "/" . $post->imagen}}" alt="Imágen de la publicacion ">
         <div class="p-3 flex items-center gap-4">
 
             @auth

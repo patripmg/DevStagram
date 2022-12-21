@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('tituloPagina')
+Perfil: {{$user->username}}
+@endsection
+
 @section('titulo')
 
 <p class="font-ubuntu uppercase text-pink-600">Perfil: {{$user->username}}</p>

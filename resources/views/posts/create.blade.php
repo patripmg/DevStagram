@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('tituloPagina')
+Crea una nueva publicación
+@endsection
+
 
 @section('titulo')
    
